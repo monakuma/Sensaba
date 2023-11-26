@@ -1,0 +1,100 @@
+[gd_scene load_steps=15 format=3 uid="uid://dcyka5e06knff"]
+
+[ext_resource type="Script" path="res://TitleScreen/menu.gd" id="1_oi0p3"]
+[ext_resource type="FontFile" uid="uid://cb26sh7sy5qq3" path="res://Font/玉ねぎ楷書激無料版v7改.ttf" id="2_qbuau"]
+[ext_resource type="PackedScene" uid="uid://b7c7gsdx2rkjm" path="res://Utility/basic_button.tscn" id="3_kwsdd"]
+[ext_resource type="Texture2D" uid="uid://bpa3s01pwgqyd" path="res://Menuイメージ/op2.png" id="4_mrlrw"]
+[ext_resource type="Texture2D" uid="uid://d3i5br8sv7q8c" path="res://Menuイメージ/op1.png" id="5_78eab"]
+[ext_resource type="AudioStream" uid="uid://cdyn2gmqqbsdq" path="res://Menuイメージ/bgm/starfall-SBA-346999900.mp3" id="5_v0bvn"]
+[ext_resource type="Texture2D" uid="uid://6pswjmf6grqi" path="res://Menuイメージ/op3.png" id="6_a5l8n"]
+[ext_resource type="Texture2D" uid="uid://dp02w68woreq" path="res://Menuイメージ/op4.png" id="7_n8l4t"]
+[ext_resource type="Texture2D" uid="uid://cvelgjug4oaj0" path="res://Menuイメージ/op5.png" id="8_vw50l"]
+[ext_resource type="Texture2D" uid="uid://dws503vghjogb" path="res://Menuイメージ/op6.png" id="9_27sxb"]
+[ext_resource type="Texture2D" uid="uid://hesb14e0geog" path="res://Menuイメージ/op7.png" id="10_lih6q"]
+[ext_resource type="Texture2D" uid="uid://br271ftoops4j" path="res://Menuイメージ/op8.png" id="11_82dps"]
+[ext_resource type="Texture2D" uid="uid://dqe1juraywbyr" path="res://Menuイメージ/op9.png" id="12_fto6p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0400p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mrlrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_78eab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_a5l8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n8l4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_vw50l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_27sxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lih6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_82dps")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fto6p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oi0p3")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 100.0
+theme_override_fonts/font = ExtResource("2_qbuau")
+theme_override_font_sizes/font_size = 72
+text = "戦国サバイバー"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_play" parent="." instance=ExtResource("3_kwsdd")]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 250.0
+offset_right = 360.0
+offset_bottom = 280.0
+theme_override_fonts/font = ExtResource("2_qbuau")
+text = "はじめる"
+
+[node name="btn_exit" parent="." instance=ExtResource("3_kwsdd")]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 290.0
+offset_right = 360.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("2_qbuau")
+text = "終わる"
+
+[node name="snd_menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_v0bvn")
+autoplay = true
+
+[node name="op10" type="AnimatedSprite2D" parent="."]
+z_index = -1
+position = Vector2(311, 179)
+scale = Vector2(0.661621, 0.361328)
+sprite_frames = SubResource("SpriteFrames_0400p")
+
+[connection signal="click_end" from="btn_play" to="." method="_on_btn_play_click_end"]
+[connection signal="click_end" from="btn_exit" to="." method="_on_btn_exit_click_end"]
