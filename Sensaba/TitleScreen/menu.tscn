@@ -74,7 +74,6 @@ offset_left = 280.0
 offset_top = 250.0
 offset_right = 360.0
 offset_bottom = 280.0
-theme_override_fonts/font = ExtResource("2_qbuau")
 text = "はじめる"
 
 [node name="btn_exit" parent="." instance=ExtResource("3_kwsdd")]
@@ -83,7 +82,6 @@ offset_left = 280.0
 offset_top = 290.0
 offset_right = 360.0
 offset_bottom = 320.0
-theme_override_fonts/font = ExtResource("2_qbuau")
 text = "終わる"
 
 [node name="snd_menu" type="AudioStreamPlayer" parent="."]

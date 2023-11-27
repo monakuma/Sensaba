@@ -101,7 +101,7 @@ const UPGRADES = {
 		"type": "weapon"
 	},
 	"armor1": {
-		"icon": ICON_PATH + "helmet_1.png",
+		"icon": ICON_PATH + "yoroi.png",
 		"displayname": "Armor",
 		"details": "Reduces Damage By 1 point",
 		"level": "Level: 1",
@@ -109,7 +109,7 @@ const UPGRADES = {
 		"type": "upgrade"
 	},
 	"armor2": {
-		"icon": ICON_PATH + "helmet_1.png",
+		"icon": ICON_PATH + "yoroi.png",
 		"displayname": "Armor",
 		"details": "Reduces Damage By an additional 1 point",
 		"level": "Level: 2",
@@ -117,7 +117,7 @@ const UPGRADES = {
 		"type": "upgrade"
 	},
 	"armor3": {
-		"icon": ICON_PATH + "helmet_1.png",
+		"icon": ICON_PATH + "yoroi.png",
 		"displayname": "Armor",
 		"details": "Reduces Damage By an additional 1 point",
 		"level": "Level: 3",
@@ -125,7 +125,7 @@ const UPGRADES = {
 		"type": "upgrade"
 	},
 	"armor4": {
-		"icon": ICON_PATH + "helmet_1.png",
+		"icon": ICON_PATH + "yoroi.png",
 		"displayname": "Armor",
 		"details": "Reduces Damage By an additional 1 point",
 		"level": "Level: 4",
@@ -133,7 +133,7 @@ const UPGRADES = {
 		"type": "upgrade"
 	},
 	"speed1": {
-		"icon": ICON_PATH + "boots_4_green.png",
+		"icon": ICON_PATH + "zouri.png",
 		"displayname": "Speed",
 		"details": "Movement Speed Increased by 50% of base speed",
 		"level": "Level: 1",
@@ -141,7 +141,7 @@ const UPGRADES = {
 		"type": "upgrade"
 	},
 	"speed2": {
-		"icon": ICON_PATH + "boots_4_green.png",
+		"icon": ICON_PATH + "zouri.png",
 		"displayname": "Speed",
 		"details": "Movement Speed Increased by an additional 50% of base speed",
 		"level": "Level: 2",
@@ -149,7 +149,7 @@ const UPGRADES = {
 		"type": "upgrade"
 	},
 	"speed3": {
-		"icon": ICON_PATH + "boots_4_green.png",
+		"icon": ICON_PATH + "zouri.png",
 		"displayname": "Speed",
 		"details": "Movement Speed Increased by an additional 50% of base speed",
 		"level": "Level: 3",
@@ -157,7 +157,7 @@ const UPGRADES = {
 		"type": "upgrade"
 	},
 	"speed4": {
-		"icon": ICON_PATH + "boots_4_green.png",
+		"icon": ICON_PATH + "zouri.png",
 		"displayname": "Speed",
 		"details": "Movement Speed Increased an additional 50% of base speed",
 		"level": "Level: 4",
