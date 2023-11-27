@@ -1,10 +1,10 @@
 [gd_scene load_steps=18 format=3 uid="uid://dncgepmkc4jf4"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_37q80"]
-[ext_resource type="Texture2D" uid="uid://doa3scrwgj2oq" path="res://Textures/Player/player_sprite.png" id="1_jefax"]
+[ext_resource type="Texture2D" uid="uid://4mkl6egk50e" path="res://Textures/Player/yumi.png" id="2_2j74d"]
 [ext_resource type="PackedScene" uid="uid://xy3cvpwdy828" path="res://Utility/hurt_box.tscn" id="3_gs51i"]
-[ext_resource type="Texture2D" uid="uid://dx7xx6vfahxlq" path="res://Textures/GUI/exp_background.png" id="4_pbpj5"]
-[ext_resource type="Texture2D" uid="uid://dlx33roiu0vlj" path="res://Textures/GUI/exp_progress.png" id="5_5ive2"]
+[ext_resource type="Texture2D" uid="uid://bb2paj8o6dwmg" path="res://Textures/GUI/経験値.png" id="4_x1tyt"]
+[ext_resource type="Texture2D" uid="uid://bt8r5enxk1apm" path="res://Textures/GUI/経験値中身.png" id="5_hh7nr"]
 [ext_resource type="FontFile" uid="uid://cb26sh7sy5qq3" path="res://Font/玉ねぎ楷書激無料版v7改.ttf" id="6_vx7lu"]
 [ext_resource type="AudioStream" uid="uid://ul8hunj8tl2t" path="res://Audio/SoundEffect/levelup.ogg" id="7_wl7d2"]
 [ext_resource type="Texture2D" uid="uid://cj6a5rhwov14" path="res://Textures/GUI/healthbar.png" id="8_flesq"]
@@ -14,11 +14,11 @@
 [ext_resource type="PackedScene" uid="uid://b7c7gsdx2rkjm" path="res://Utility/basic_button.tscn" id="12_i8esf"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nffdp"]
-radius = 4.0
-height = 16.0
+radius = 5.0
+height = 18.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yfi4i"]
-size = Vector2(12, 20)
+size = Vector2(12, 23)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_anwqc"]
 radius = 370.951
@@ -27,19 +27,21 @@ radius = 370.951
 radius = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6vwp8"]
+radius = 14.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 motion_mode = 1
 script = ExtResource("1_37q80")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_jefax")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_2j74d")
 hframes = 2
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 3)
+position = Vector2(-1, -1)
 shape = SubResource("CapsuleShape2D_nffdp")
 
 [node name="walkTimer" type="Timer" parent="."]
@@ -52,7 +54,8 @@ collision_mask = 2
 HurtBoxType = 2
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
-position = Vector2(2, 3)
+visible = false
+position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_yfi4i")
 
 [node name="Attack" type="Node2D" parent="."]
@@ -86,6 +89,7 @@ monitorable = false
 shape = SubResource("CircleShape2D_anwqc")
 
 [node name="GrabArea" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 8
 
@@ -97,6 +101,8 @@ collision_layer = 0
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea"]
+visible = false
+position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_6vwp8")
 
 [node name="GUILayer" type="CanvasLayer" parent="."]
@@ -112,8 +118,8 @@ unique_name_in_owner = true
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 40.0
-texture_under = ExtResource("4_pbpj5")
-texture_progress = ExtResource("5_5ive2")
+texture_under = ExtResource("4_x1tyt")
+texture_progress = ExtResource("5_hh7nr")
 
 [node name="lbl_level" type="Label" parent="GUILayer/GUI/ExperienceBar"]
 unique_name_in_owner = true

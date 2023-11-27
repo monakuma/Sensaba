@@ -1,3 +1,4 @@
+AnimationPlayer
 TileMap
 AnimatedSprite2D
 AudioStreamPlayer
@@ -18,6 +19,5 @@ Area2D
 Node2D
 AudioStreamPlayer2D
 Timer
-AnimationPlayer
 Camera2D
 CharacterBody2D

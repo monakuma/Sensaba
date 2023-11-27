@@ -15,8 +15,11 @@ var angle_more = Vector2.ZERO
 signal remove_from_array(object)
 
 @onready var player = get_tree().get_first_node_in_group("player")
+@onready var sprite = $Sprite2D
+@onready var anim = $AnimationPlayer
 
 func _ready():
+	anim.play("textisen")
 	match level:
 		1:
 			hp = 9999

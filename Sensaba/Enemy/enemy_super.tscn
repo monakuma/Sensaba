@@ -49,7 +49,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rborl"]
-size = Vector2(1232, 1126)
+size = Vector2(264, 267)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ucec4"]
 size = Vector2(969.375, 1122.38)
@@ -66,7 +66,6 @@ experience = 100
 enemy_damage = 20
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(5, 5)
 texture = ExtResource("2_bheoi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -83,7 +82,7 @@ collision_mask = 4
 HurtBoxType = 1
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
-position = Vector2(-1, -5)
+position = Vector2(13, 12.5)
 shape = SubResource("RectangleShape2D_rborl")
 
 [node name="HitBox" parent="." instance=ExtResource("4_vpjbj")]

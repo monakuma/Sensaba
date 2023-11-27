@@ -49,10 +49,10 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rborl"]
-size = Vector2(33.234, 29.6985)
+size = Vector2(28.2843, 22.6274)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ucec4"]
-size = Vector2(17, 30)
+size = Vector2(17, 25)
 
 [node name="enemy_kobold_strong" type="CharacterBody2D"]
 collision_layer = 5
@@ -65,7 +65,7 @@ enemy_damage = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(2, -1)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_i41t4")
 hframes = 2
 
@@ -83,16 +83,15 @@ collision_mask = 4
 HurtBoxType = 1
 
 [node name="CollisionShape2D" parent="HurtBox" index="0"]
-position = Vector2(5.25, 7.25)
+position = Vector2(6, 3)
 rotation = 0.785398
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_rborl")
 
 [node name="HitBox" parent="." instance=ExtResource("4_e7l5k")]
 collision_layer = 2
 
 [node name="CollisionShape2D" parent="HitBox" index="0"]
-position = Vector2(8.5, 3)
+position = Vector2(8.5, 4.5)
 shape = SubResource("RectangleShape2D_ucec4")
 
 [node name="snd_hit" type="AudioStreamPlayer2D" parent="."]
