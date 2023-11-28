@@ -1,9 +1,8 @@
 res://World/world.tscn
 res://Audio/Music/snd_Music.gd
-res://Player/player.gd
-res://Utility/upgrade_db.gd
 res://Player/player.tscn
 res://Enemy/enemy_juggernaut.tscn
+res://Player/Attack/tornado.tscn
 res://Enemy/enemy_cyclops.tscn
 res://Utility/basic_button.tscn
 res://TitleScreen/menu.tscn
@@ -15,9 +14,6 @@ res://Utility/upgrade_db.tscn
 res://Objects/experience_gem.tscn
 res://Player/Attack/javelin.tscn
 res://Player/Attack/ice_spear.tscn
-res://Player/Attack/tornado.tscn
-res://Player/Attack/tornado.gd
 res://Enemy/enemy_kobold_weak.tscn
 res://Enemy/enemy_kobold_strong.tscn
-res://Utility/enemy_spawner.gd
 res://Enemy/enemy_super.tscn

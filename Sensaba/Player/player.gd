@@ -33,8 +33,8 @@ var spell_size = 0
 var additional_attacks = 0
 
 #IceSpear
-var icespear_ammo = 3
-var icespear_baseammo = 3
+var icespear_ammo = 0
+var icespear_baseammo = 0
 var icespear_attackspeed = 1.5
 var icespear_level = 0
 
